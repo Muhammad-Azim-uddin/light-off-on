@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+            padding: 8px 30px;
+            background: gray;
+        }
+        button:active{
+            background: rgba(255, 68, 0, 0.596);
+        }
+    </style>
+  </head>
+  <body>
+    <div style="text-align: center;">
+        <button id="on" >On</button>
+        <img id="img" src="./off-removebg-preview.png" alt="">
+        <button id="off"  >Off</button>
+    </div>
+
+    <script>
+        let onBtn = document.getElementById("on");
+        let offBtn = document.getElementById("off");
+        let bulb = document.getElementById("img")
+
+        onBtn.addEventListener("click", function(){
+            bulb.src = "./on-removebg-preview.png";
+            bulb.style.filter = 'drop-shadow(0px 0px 100px gold)';
+
+        })
+
+        offBtn.addEventListener("click" ,function(){
+            bulb.src = "./off-removebg-preview.png";
+            bulb.style.filter = 'drop-shadow(0px 0px 0px )';
+        })
+        </script>
+  </body>
+</html>
